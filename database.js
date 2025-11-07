@@ -18,6 +18,17 @@ const db = new sqlite3.Database(dbsource, (err) => {
                     year TEXT
                 );
             `);
+            
+            db.run(`
+                CREATE TABLE IF NOT EXISTS users (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    username TEXT NOT NULL UNIQUE,
+                    password TEXT NOT NULL
+                    );`, (err) => {
+                    if (err) {
+                        console.error("Gagal Membuat Tabel 'users':", err.message);
+                    }
+                });
 
             // Tabel directors
             db.run(`
