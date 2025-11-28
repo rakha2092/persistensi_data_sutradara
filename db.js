@@ -58,14 +58,17 @@
 
 // module.exports = db;
 
-const { pool } = require('pg')
-require('dotenv').config()
+const { Pool } = require('pg');
+require('dotenv').config();
 
-const pooldb = new pool({
-  connectionString: process.env.database_url,
-  ssl: { rejectUnauthorized: false }
-})
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    // Beberapa layanan cloud (termasuk Neon) memerlukan SSL
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
 
 module.exports = {
-  query: (text, params) => pooldb.query(text, params)
-}
+    query: (text, params) => pool.query(text, params),
+};
