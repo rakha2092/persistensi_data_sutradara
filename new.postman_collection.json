@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "d22dbb8a-74ec-41b7-8376-411ab01bf68e",
+		"name": "new",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47979392"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://persistensi-data-sutradara-five.vercel.app/status",
+							"protocol": "https",
+							"host": [
+								"persistensi-data-sutradara-five",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"rakha\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://persistensi-data-sutradara-five.vercel.app/auth/register",
+							"protocol": "https",
+							"host": [
+								"persistensi-data-sutradara-five",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"rakha\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://persistensi-data-sutradara-five.vercel.app/auth/login",
+							"protocol": "https",
+							"host": [
+								"persistensi-data-sutradara-five",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register_admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://persistensi-data-sutradara-five.vercel.app//auth/register-admin",
+							"protocol": "https",
+							"host": [
+								"persistensi-data-sutradara-five",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"",
+								"auth",
+								"register-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login_admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://persistensi-data-sutradara-five.vercel.app//auth/login",
+							"protocol": "https",
+							"host": [
+								"persistensi-data-sutradara-five",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "get all movies",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTc2NDQ4MjM3OCwiZXhwIjoxNzY0NDg1OTc4fQ.OVuy8Eos7oSUHsm9Fe-uFFL2dB-SbMOLQ-2FRKez7VQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Naruto\",\r\n    \"director_id\": 1,\r\n    \"year\": 2006\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://persistensi-data-sutradara-five.vercel.app//movies",
+							"protocol": "https",
+							"host": [
+								"persistensi-data-sutradara-five",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTc2NDQ4MjM3OCwiZXhwIjoxNzY0NDg1OTc4fQ.OVuy8Eos7oSUHsm9Fe-uFFL2dB-SbMOLQ-2FRKez7VQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Naruto\",\r\n    \"director_id\": 1,\r\n    \"year\": 2005\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://persistensi-data-sutradara-five.vercel.app/movies/3",
+							"protocol": "https",
+							"host": [
+								"persistensi-data-sutradara-five",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"movies",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "director",
+			"item": [
+				{
+					"name": "tambah director",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTc2NDQ4MjM3OCwiZXhwIjoxNzY0NDg1OTc4fQ.OVuy8Eos7oSUHsm9Fe-uFFL2dB-SbMOLQ-2FRKez7VQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rakha\",\r\n    \"birthYear\": 2006\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://persistensi-data-sutradara-five.vercel.app/directors",
+							"protocol": "https",
+							"host": [
+								"persistensi-data-sutradara-five",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTc2NDQ4MjM3OCwiZXhwIjoxNzY0NDg1OTc4fQ.OVuy8Eos7oSUHsm9Fe-uFFL2dB-SbMOLQ-2FRKez7VQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"febri\",\r\n    \"birthYear\": 2005\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://persistensi-data-sutradara-five.vercel.app/directors/2",
+							"protocol": "https",
+							"host": [
+								"persistensi-data-sutradara-five",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"directors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTc2NDQ4MjM3OCwiZXhwIjoxNzY0NDg1OTc4fQ.OVuy8Eos7oSUHsm9Fe-uFFL2dB-SbMOLQ-2FRKez7VQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://persistensi-data-sutradara-five.vercel.app/directors/2",
+							"protocol": "https",
+							"host": [
+								"persistensi-data-sutradara-five",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"directors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
